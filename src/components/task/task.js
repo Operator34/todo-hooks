@@ -80,7 +80,7 @@ const Task = ({
                 e.stopPropagation();
               }}
             ></button>
-            {transformTime(task.secondTimer)}
+            {task.secondTimer <= 0 ? '00:00:00' : transformTime(task.secondTimer)}
           </span>
           <span className="description">
             created{' '}

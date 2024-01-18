@@ -30,7 +30,7 @@ const NewTaskForm = ({ addTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const secondTimer = Number(state.min) * 60 + Number(state.sec);
-    addTask(state.text, secondTimer);
+    addTask(state.text.trim(), secondTimer);
     setState({ text: '', min: '', sec: '' });
   };
 
